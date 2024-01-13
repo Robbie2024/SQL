@@ -61,3 +61,10 @@ SELECT count(DISTINCT cust.acctnum) as number_of_orders ,
        length(orderid) = 6 AND 
        orderid IS NOT NULL;
 */
+/* Q#8 List all the products sold in Los Angeles in February, and include how many of each were sold?
+SELECT Product,
+       sum(quantity) AS Quantity_sold
+  FROM BIT_DB.FebSales
+ WHERE Location LIKE '%Los Angeles%'
+ GROUP BY product;
+*/
